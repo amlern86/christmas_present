@@ -340,17 +340,15 @@ blockquote {
 
     position: relative;
 
-    display: inline-block;
+    display: inline-flex;
+
+    align-items: center;
 
 }
 
 .heart {
 
-    display: inline-block;
-
-    transition:
-        transform .35s ease,
-        filter .35s ease;
+    transition: transform .3s ease;
 
 }
 
@@ -358,40 +356,39 @@ blockquote {
 
     position: absolute;
 
+    bottom: 150%;
+
     left: 50%;
 
-    top: 150%;
+    transform: translateX(-50%);
 
-    transform: translate(-50%, 8px);
+    background: #111827;
 
-    white-space: nowrap;
+    color: #FACC15;
+
+    padding: 6px 12px;
+
+    border-radius: 8px;
 
     font-size: .75rem;
 
     font-style: italic;
 
-    color: #FACC15;
-
-    letter-spacing: 1px;
+    white-space: nowrap;
 
     opacity: 0;
 
-    transition:
-        opacity 1s ease,
-        transform 1s ease;
+    visibility: hidden;
 
-    pointer-events: none;
+    transition: opacity .3s ease;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,.35);
 
 }
 
 .heart-container:hover .heart {
 
-    transform: scale(1.15);
-
-    filter:
-        brightness(1.2)
-        drop-shadow(0 0 6px #FACC15)
-        drop-shadow(0 0 12px #FACC15);
+    transform: scale(1.2);
 
 }
 
@@ -399,7 +396,7 @@ blockquote {
 
     opacity: 1;
 
-    transform: translate(-50%, 0);
+    visibility: visible;
 
 }
 
