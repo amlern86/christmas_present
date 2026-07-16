@@ -1,11 +1,13 @@
 /* ==========================================
    PROJECT EVERGREEN
-   Version: v0.3 Evergreen
+   Version: v0.4 Blueprint
    Designed & Built with ❤️ for Dad
 ========================================== */
 
 
-/* ---------- RESET ---------- */
+/* ==========================================
+   RESET
+========================================== */
 
 * {
     margin: 0;
@@ -14,7 +16,9 @@
 }
 
 
-/* ---------- PAGE ---------- */
+/* ==========================================
+   PAGE
+========================================== */
 
 body {
 
@@ -37,12 +41,13 @@ body {
 }
 
 
-/* ---------- CARD ---------- */
+/* ==========================================
+   DASHBOARD
+========================================== */
 
 .container {
 
     width: 90%;
-
     max-width: 700px;
 
     background: #1E293B;
@@ -51,6 +56,10 @@ body {
 
     padding: 55px;
 
+    position: relative;
+
+    overflow: hidden;
+
     text-align: center;
 
     box-shadow: 0 20px 50px rgba(0,0,0,.35);
@@ -58,7 +67,44 @@ body {
 }
 
 
-/* ---------- HERO ---------- */
+/* ==========================================
+   WATERMARK
+========================================== */
+
+.container::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image: url("assets/logo/evergreen-logo.png");
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-size: 55%;
+
+    opacity: .06;
+
+    pointer-events: none;
+
+}
+
+.container > * {
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+/* ==========================================
+   HERO
+========================================== */
 
 .hero h1 {
 
@@ -74,7 +120,7 @@ body {
 
     font-size: .85rem;
 
-    color: #9CA3AF;
+    color: #94A3B8;
 
     letter-spacing: 4px;
 
@@ -85,7 +131,9 @@ body {
 }
 
 
-/* ---------- PROGRESS ---------- */
+/* ==========================================
+   BUILD PROGRESS
+========================================== */
 
 .progress-number {
 
@@ -123,6 +171,8 @@ body {
 
     background: #16A34A;
 
+    animation: loadProgress 1.8s ease forwards;
+
 }
 
 .status {
@@ -134,7 +184,9 @@ body {
 }
 
 
-/* ---------- DIVIDERS ---------- */
+/* ==========================================
+   DIVIDERS
+========================================== */
 
 hr {
 
@@ -147,7 +199,9 @@ hr {
 }
 
 
-/* ---------- INFO SECTION ---------- */
+/* ==========================================
+   PROJECT STATUS
+========================================== */
 
 .info-card {
 
@@ -162,7 +216,9 @@ hr {
 }
 
 
-/* ---------- LABELS ---------- */
+/* ==========================================
+   LABELS
+========================================== */
 
 .label {
 
@@ -179,7 +235,9 @@ hr {
 }
 
 
-/* ---------- VALUES ---------- */
+/* ==========================================
+   VALUES
+========================================== */
 
 .value {
 
@@ -192,7 +250,9 @@ hr {
 }
 
 
-/* ---------- QUOTE ---------- */
+/* ==========================================
+   QUOTE
+========================================== */
 
 blockquote {
 
@@ -207,7 +267,9 @@ blockquote {
 }
 
 
-/* ---------- JOURNAL ---------- */
+/* ==========================================
+   ENGINEERING JOURNAL
+========================================== */
 
 .journal {
 
@@ -224,39 +286,139 @@ blockquote {
 }
 
 
-/* ---------- FOOTER ---------- */
+/* ==========================================
+   FOOTER
+========================================== */
 
 .footer {
 
     display: flex;
 
-    justify-content: space-between;
+    justify-content: center;
 
-    align-items: flex-start;
+    gap: 120px;
+
+    margin-bottom: 30px;
+
+}
+
+.footer-item {
 
     text-align: center;
 
-    gap: 60px;
-
-    margin-bottom: 35px;
+    min-width: 160px;
 
 }
 
 
-/* ---------- SIGNATURE ---------- */
+/* ==========================================
+   SIGNATURE
+========================================== */
 
 .signature {
 
     border-top: 1px solid #475569;
 
-    padding-top: 25px;
+    margin-top: 25px;
 
-    margin-top: 20px;
+    padding-top: 22px;
+
+    text-align: center;
+
+    font-size: .78rem;
+
+    color: #94A3B8;
+
+    letter-spacing: .5px;
+
+}
+/* ==========================================
+   EASTER EGG
+========================================== */
+
+.heart-container {
+
+    position: relative;
+
+    display: inline-block;
+
+}
+
+.heart {
+
+    display: inline-block;
+
+    transition:
+        transform .35s ease,
+        filter .35s ease;
+
+}
+
+.secret-message {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 150%;
+
+    transform: translate(-50%, 8px);
+
+    white-space: nowrap;
 
     font-size: .75rem;
 
-    color: #9CA3AF;
+    font-style: italic;
+
+    color: #FACC15;
 
     letter-spacing: 1px;
+
+    opacity: 0;
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+
+    pointer-events: none;
+
+}
+
+.heart-container:hover .heart {
+
+    transform: scale(1.15);
+
+    filter:
+        brightness(1.2)
+        drop-shadow(0 0 6px #FACC15)
+        drop-shadow(0 0 12px #FACC15);
+
+}
+
+.heart-container:hover .secret-message {
+
+    opacity: 1;
+
+    transform: translate(-50%, 0);
+
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes loadProgress {
+
+    from {
+
+        width: 0%;
+
+    }
+
+    to {
+
+        width: 18%;
+
+    }
 
 }
