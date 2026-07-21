@@ -1,6 +1,6 @@
 // ==========================================
 // PROJECT EVERGREEN
-// Project Data
+// Mission Control
 // ==========================================
 
 const project = {
@@ -11,11 +11,11 @@ const project = {
 
     progress: 25,
 
-    phase: "Architecture",
+    phase: "Mission Control",
 
-    milestone: "Mission Control",
+    milestone: "Dynamic Mission History",
 
-    version: "v0.5 Brain",
+    version: "v0.6 Mission Control",
 
     session: 6,
 
@@ -23,11 +23,13 @@ const project = {
 
         session: "Session 006",
 
-        sprint: "Admin Dashboard"
+        sprint: "Mission Control"
 
     },
 
-    updated: "July 15, 2026"
+    updated: "July 20, 2026",
+
+    quote: "\"Progress isn't always visible, but it's always valuable.\""
 
 };
 
@@ -70,6 +72,7 @@ updateText("current-phase", project.phase);
 updateText("next-milestone", project.milestone);
 updateText("build-version", project.version);
 updateText("updated-date", project.updated);
+updateText("quote", project.quote);
 
 // Engineering Journal
 updateText("journal-session", project.journal.session);
