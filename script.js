@@ -17,13 +17,18 @@ const project = {
 
     version: "v0.5 Brain",
 
-    session: 5,
+    session: 6,
 
-    journalSession: "Session 006",
+    journal: {
 
-    journalSprint: "Admin Dashboard",
+        session: "Session 006",
+
+        sprint: "Admin Dashboard"
+
+    },
 
     updated: "July 15, 2026"
+
 };
 
 // ==========================================
@@ -36,48 +41,47 @@ function updateText(id, value, prefix = "") {
 
 }
 
+function animateProgress(percent) {
+
+    const progressBar = document.getElementById("progress-fill");
+
+    progressBar.style.width = "0%";
+
+    setTimeout(() => {
+
+        progressBar.style.transition = "width 1.8s ease";
+
+        progressBar.style.width = percent + "%";
+
+    }, 100);
+
+}
+
 // ==========================================
 // Update the Dashboard
 // ==========================================
 
-// Update the percentage
-document.getElementById("progress-number").textContent =
-    project.progress + "%";
+// Progress
+updateText("progress-number", project.progress + "%");
+animateProgress(project.progress);
 
-// Update the current phase
+// Project Status
 updateText("current-phase", project.phase);
-
-// Update the next milestone
 updateText("next-milestone", project.milestone);
-
-// Update the build versions
 updateText("build-version", project.version);
-
-// Update the updated date
 updateText("updated-date", project.updated);
 
-// Update the Engineering Journal
-updateText("journal-session", project.journalSession);
+// Engineering Journal
+updateText("journal-session", project.journal.session);
 
 updateText(
     "journal-sprint",
-    project.journalSprint,
+    project.journal.sprint,
     "Current Sprint: "
 );
-// Update the progress bar
-const progressBar = document.getElementById("progress-fill");
 
-// Start at 0%
-progressBar.style.width = "0%";
+// ==========================================
+// Initialization
+// ==========================================
 
-// Animate to the project percentage
-setTimeout(() => {
-
-    progressBar.style.transition = "width 1.8s ease";
-
-    progressBar.style.width = project.progress + "%";
-
-}, 100);
-
-// Verify the project loaded correctly
 console.log(project);

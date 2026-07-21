@@ -1,54 +1,98 @@
-# Project Evergreen Roadmap
+# Project Evergreen
 
-## v0.3 – Evergreen ✅
+Designed & Built with ❤️ for Dad
 
-- Dashboard Layout
-- Progress Tracker
-- Engineering Journal
-- GitHub Pages
+Started
+July 14, 2026
 
----
+Status
+ACTIVE
 
-## v0.4 – Blueprint
-
-- JavaScript data model
-- Animated progress bar
-- Better typography
+Mission
+Deliver the greatest Christmas surprise possible while documenting the journey from idea to reality.
 
 ---
 
-## v0.5 – Framework
+# Roadmap
 
-- Admin dashboard
-- Editable project data
+## Completed
+
+✅ Git initialized
+
+✅ GitHub repository created
+
+✅ GitHub Desktop configured
+
+✅ VS Code configured
+
+✅ GitHub Pages deployed
+
+✅ Initial dashboard
+
+✅ QR code launch
+
+✅ Engineering Journal
+
+✅ Evergreen branding
+
+✅ Animated progress bar
+
+✅ Watermark
+
+✅ Hover Easter egg
+
+✅ JavaScript project object
+
+✅ Dynamic progress percentage
+
+✅ Dynamic progress bar
+
+✅ Dynamic current phase
+
+✅ Dynamic next milestone
+
+✅ Dynamic build version
+
+✅ Dynamic updated date
 
 ---
 
-## v0.6 – Integration
+## Current Sprint
+
+### Sprint 006 — Mission Control
+
+#### Planned
+
+⬜ Dynamic Engineering Journal
+
+⬜ Dynamic Session Number
+
+⬜ Dynamic Footer
+
+⬜ Hidden Admin Dashboard
+
+⬜ Dashboard cleanup
+
+⬜ Automatic version updates
+
+---
+
+## Future Sprints
+
+### Sprint 007 — Raspberry
 
 - Raspberry Pi setup
-- Remote updates
+- Local web server
+- Dashboard deployment
 
----
+### Sprint 008 — Countdown
 
-## v0.7 – Flight Engine
+- Countdown mode
+- Holiday animations
+- Final UI polish
 
-- Live flight tracking
+### Sprint 009 — Christmas Morning
 
----
-
-## v0.8 – Sports Engine
-
-- Avalanche scores
-- Favorite teams
-
----
-
-## v0.9 – Final Assembly
-
-- Hardware integration
-- Final testing
-
----
-
-## v1.0 – Christmas Morning 🎄
+- Final release
+- Hidden surprises
+- Gift reveal

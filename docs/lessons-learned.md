@@ -115,7 +115,7 @@ JavaScript finds that structure and updates it.
 
 ## Lesson Learned 007 — Browser Cache Can Mimic Broken Code
 
-**Date:** July 15, 2026
+**Date:** July 20, 2026
 
 ### Lesson
 
@@ -170,3 +170,33 @@ Each prediction built confidence and transformed coding from following instructi
 ### Takeaway
 
 The best learning happens when explaining, predicting, and reasoning through code—not simply copying it.
+
+---
+
+## Lesson Learned 010 — Good Architecture Makes Future Features Easier
+
+**Date:** July 20, 2026
+
+### Lesson
+
+Reorganizing the application into logical sections and grouping related data into nested objects improved the structure of the project without changing how the dashboard looked. A well-organized codebase is easier to understand, easier to maintain, and provides a stronger foundation for future features.
+
+### Takeaway
+
+Good software architecture is an investment. The more organized today's code is, the easier tomorrow's development becomes.
+
+---
+
+## Lesson Learned 011 — Knowing When Not to Ship Is Good Engineering
+
+**Date:** July 20, 2026
+
+### Lesson
+
+Development began on a dynamic Mission History feature that would automatically generate dashboard content using arrays and loops. Although the concept was successfully proven, the feature was intentionally postponed rather than forcing an unfinished implementation into the project.
+
+Protecting a stable, working codebase proved more valuable than rushing a new feature.
+
+### Takeaway
+
+Successful engineering is not measured by how many features are started, but by how many are completed well. Sometimes postponing a feature is the most professional decision.
